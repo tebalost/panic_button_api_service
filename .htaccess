@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME}%  !-d
+RewriteRule ^api/auth/login$  ./login.php?action=$1 [NC,L]
+RewriteRule ^api/customer/create-update-user  ./register.php?action=$1 [NC,L]
+RewriteRule ^api/customer/panic-request$  ./panic_request.php [NC,L]
+RewriteRule ^api/customer/admin-panic-request$  ./panic-request.php [NC,L]
+RewriteRule ^api/reports/get-panic-requests$  ./request_data.php [NC,L]
+RewriteRule ^api/system/get-countries$  ./countries.php [NC,L]
+RewriteRule ^api/customer/sign-up-user  ./system-register.php?action=$1 [NC,L]
